@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Now Next Later · a 12-month roadmap for Spend Lens</title>
+<meta name="description" content="A 12-month product roadmap for Spend Lens, a privacy-first spending app: strategy, outcomes, 16 initiatives scored with RICE, ICE or value and effort, capacity, dependencies and a quarter plan you can change.">
+<meta name="theme-color" content="#0277bd">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230277bd'/%3E%3Crect x='6' y='8' width='12' height='4' rx='2' fill='white'/%3E%3Crect x='10' y='14' width='14' height='4' rx='2' fill='white' opacity='.8'/%3E%3Crect x='14' y='20' width='12' height='4' rx='2' fill='white' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600;7..72,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css?v=1">
+<style>
+:root{--accent:#0277bd;--soft:#e1f5fe;--t1:#2e7d32;--t2:#ef6c00;--t3:#6a1b9a;--t4:#00838f}
+.intro .kicker{font:600 12.5px var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.strat{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:10px;margin-top:10px}
+.strat div{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;font-size:14px}
+.strat b{display:block;font:600 12px var(--body);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.col{background:#f6f5f2;border-radius:16px;padding:10px;min-height:120px}
+.col h3{font:700 18px var(--display);margin:4px 4px 2px}
+.col .cap{font-size:12.5px;color:var(--muted);margin:0 4px 8px}
+.cap.over{color:#c62828;font-weight:600}
+.ini{background:#fff;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:12px;padding:9px 10px;margin-top:8px;cursor:pointer;font-size:14px}
+.ini:hover{box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.ini .m{display:flex;justify-content:space-between;gap:6px;font-size:12px;color:var(--muted);margin-top:4px}
+.ini .s{font-weight:700;color:var(--accent)}
+.ini .dep{color:#c62828;font-size:12px;font-weight:600;margin-top:4px}
+.ini .pin{font-size:11px;background:#efebe7;border-radius:999px;padding:1px 7px}
+.ed{border:2px solid var(--accent);border-radius:16px;padding:16px;margin-top:12px;background:#fff}
+.ed .sl{display:grid;grid-template-columns:150px 1fr 60px;gap:10px;align-items:center;font-size:14px;margin-top:6px}
+.ed input[type=range]{accent-color:var(--accent)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;margin-top:8px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--c);margin-right:6px}
+.gantt{display:grid;grid-template-columns:200px repeat(4,1fr);gap:0;font-size:13px;margin-top:10px;min-width:640px}
+.gantt>div{padding:6px 8px;border-bottom:1px solid #f0ede7}
+.gantt .h{font-weight:600;color:var(--muted);background:#faf8f4}
+.gantt .bar{background:var(--c);color:#fff;border-radius:6px;font-weight:600;font-size:12px;padding:4px 8px;margin:2px 0}
+@media (max-width:900px){.strat{grid-template-columns:1fr 1fr}.cols{grid-template-columns:1fr}}
+@media (max-width:600px){.strat{grid-template-columns:1fr}.ed .sl{grid-template-columns:100px 1fr 44px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><i><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3" width="8" height="2.5" rx="1" fill="white"/><rect x="5" y="7" width="8" height="2.5" rx="1" fill="white"/><rect x="7" y="11" width="7" height="2.5" rx="1" fill="white"/></svg></i>Now Next Later</a>
+  <nav><a class="hide-sm" href="https://github.com/costasxeras-stack/now-next-later">GitHub</a><a href="https://kostasxeras.com/">Portfolio</a></nav>
+</div></header>
+<main class="wrap">
+  <section class="intro">
+    <span class="kicker">Product roadmap · 12 months · Spend Lens</span>
+    <h1>A roadmap is a set of bets, not a list of dates.</h1>
+    <p>A 12-month roadmap for <a href="https://kostasxeras.com/spend-lens/">Spend Lens</a>, my privacy-first spending app, treated as a startup with two engineers, a designer and me. Strategy first, then 16 initiatives scored with the framework you choose, placed into Now, Next and Later by score, capacity and dependencies. Change any score and watch the plan move.</p>
+  </section>
+
+  <section class="card">
+    <h2>Strategy</h2>
+    <div class="strat">
+      <div><b style="color:var(--accent)">Vision</b>Know where your money goes and agree on it at home, without giving anyone your bank login.</div>
+      <div style="--c:var(--t1)"><b style="color:var(--t1)">Bet 1 · Trust</b>Private by design is the reason to choose us. Every feature keeps data on the device.</div>
+      <div><b style="color:var(--t2)">Bet 2 · Habit</b>Value comes from the second and third month. Make the monthly return easy.</div>
+      <div><b style="color:var(--t3)">Bet 3 · Couples</b>Shared money is the unserved job. Two exports, one picture, no arguments.</div>
+    </div>
+    <p class="sub" style="margin-top:12px"><b>12-month outcome:</b> [x] households importing every month, with [y]% of spending categorised without manual work. <b>Not doing:</b> bank connections, investments, credit products.</p>
+  </section>
+
+  <section class="card">
+    <div class="row" style="justify-content:space-between;margin-top:0">
+      <h2>The roadmap</h2>
+      <div class="seg" role="group" aria-label="Scoring"><button type="button" data-fw="rice" aria-pressed="true">RICE</button><button type="button" data-fw="ice" aria-pressed="false">ICE</button><button type="button" data-fw="ve" aria-pressed="false">Value ÷ effort</button></div>
+    </div>
+    <p class="sub" id="fwnote"></p>
+    <div class="grid3" style="align-items:end">
+      <div><label for="cap">Team capacity per quarter (person-weeks)</label><input type="number" id="cap" value="26" min="4" step="2"></div>
+      <div><label for="filt">Show bet</label><select id="filt"><option value="">All bets</option><option value="t1">Trust</option><option value="t2">Habit</option><option value="t3">Couples</option><option value="t4">Foundations</option></select></div>
+      <div class="row" style="margin:0"><button class="btn small" type="button" id="reset">Reset my scores</button><button class="btn small" type="button" id="md">Copy as Markdown</button></div>
+    </div>
+    <div class="legend"><span style="--c:var(--t1)">Trust</span><span style="--c:var(--t2)">Habit</span><span style="--c:var(--t3)">Couples</span><span style="--c:var(--t4)">Foundations</span></div>
+    <div class="cols" id="cols"></div>
+    <div class="ed" id="ed" hidden></div>
+    <p class="note">All scores are my own estimates for a product with no users yet. Reach is the share of active households affected in a quarter, impact is on a 0.25 to 3 scale, confidence is how sure I am, effort is person-weeks.</p>
+  </section>
+
+  <section class="card">
+    <h2>What the scores say, and where I overrule them</h2>
+    <p class="sub">Under all three frameworks, with my default estimates, the Couples bet lands in Later: shared budgets are big and uncertain, so they score low. Cheap, safe habit work fills Now. That is the classic trap of scoring: it favours small certain wins over the strategic bet. My call would be to keep Now as scored, then pin <b>Shared budget from two exports</b> to Next and run interviews first (<a href="https://kostasxeras.com/listening-tour/">Listening Tour</a>) to raise its confidence or kill it. Try the pin in the editor and see what it pushes out.</p>
+  </section>
+
+  <section class="card">
+    <h2>Quarter plan</h2>
+    <p class="sub">Initiatives fill each quarter in score order until capacity runs out, and never before what they depend on. Now is Q1, Next is Q2, Later is Q3 and Q4.</p>
+    <div style="overflow-x:auto"><div class="gantt" id="gantt"></div></div>
+  </section>
+
+  <section class="card">
+    <h2>How I would run it</h2>
+    <ul class="sub" style="padding-left:20px;display:grid;gap:6px">
+      <li><b>Now is a commitment, Next is a plan, Later is a direction.</b> Only Now has scope and owners. Later items are problems, not features.</li>
+      <li><b>Review every six weeks</b> against the outcome metrics, not against delivery dates.</li>
+      <li><b>Scores start debates, they do not end them.</b> When the framework changes the order a lot, the inputs are uncertain. That is where research goes first.</li>
+      <li><b>Each initiative names the metric it should move.</b> If it does not move it after launch, it leaves the roadmap.</li>
+    </ul>
+  </section>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<footer><div class="wrap"><span>Now Next Later v0.1.0 by <a href="https://kostasxeras.com/">Konstantinos Xeras</a>, built with Claude (Anthropic). <a href="https://github.com/costasxeras-stack/now-next-later">Code and decisions on GitHub</a>.</span></div></footer>
+<script>
+(function () {
+  'use strict';
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  function toast(m) { var t = $('toast'); t.textContent = m; t.classList.add('on'); setTimeout(function () { t.classList.remove('on'); }, 1800); }
+  // id, name, bet, problem, metric, reach %, impact, confidence %, effort pw, deps
+  var BASE = [
+    ['split', 'Split one payment across categories', 't2', 'A supermarket receipt is groceries and household. Today it counts as one.', 'Share of spending categorised correctly', 40, 1, 80, 6, []],
+    ['dict', 'Polish card descriptor dictionary', 't4', 'Card payments arrive with cryptic place names, so rules miss them.', 'Spending left in Other', 90, 1, 80, 8, []],
+    ['shared', 'Shared budget from two exports', 't3', 'Couples have two banks and one budget. Today one export at a time.', 'Households with two people importing', 25, 3, 50, 14, ['dedupe', 'split']],
+    ['dedupe', 'Match transfers between two accounts', 't3', 'Money moved between partners counts twice as spending.', 'Spending errors reported', 25, 2, 70, 6, []],
+    ['monthly', 'Month-end review in 3 minutes', 't2', 'Importing is a chore with no reward at the end.', 'Share importing a second month', 70, 2, 60, 6, []],
+    ['remind', 'Reminder to import, on device', 't2', 'People forget the monthly import.', 'Share importing a second month', 70, 1, 50, 2, []],
+    ['sync', 'Encrypted sync between two devices', 't1', 'Partners use different phones. Local storage means one device.', 'Households using two devices', 30, 2, 40, 16, ['shared']],
+    ['backup', 'One-tap encrypted backup file', 't1', 'Clearing the browser deletes everything.', 'Users with a backup', 80, 1, 80, 3, []],
+    ['pdf', 'Import PDF statements', 't4', 'Some banks only give PDFs.', 'Imports that fail', 20, 2, 40, 10, []],
+    ['goals', 'Shared saving goals', 't3', 'Couples save for a holiday or a flat but cannot see progress together.', 'Households with a goal', 30, 1, 50, 6, ['shared']],
+    ['subs', 'Cancel-help for subscriptions', 't2', 'People find subscriptions but do not act.', 'Share acting on a subscription found', 50, 1, 60, 4, []],
+    ['explain', 'Explain each category decision', 't1', 'People do not trust a category they cannot see the reason for.', 'Category changes per import', 80, 0.5, 80, 3, []],
+    ['fairness', 'Fair share view for couples', 't3', 'Who paid what this month, by income share or 50/50.', 'Disagreements avoided, self-reported', 20, 2, 40, 5, ['shared']],
+    ['pwa', 'Install as an app, works offline', 't4', 'A web page is easy to lose.', 'Return visits', 60, 0.5, 80, 4, []],
+    ['eng', 'English and Polish interface switch', 't4', 'Expats in Poland use Polish banks with English skills.', 'New users', 30, 0.5, 70, 4, []],
+    ['forecast', 'Month-end forecast per category', 't2', 'Early warnings exist, but not a forecast of the month total.', 'Budgets kept', 50, 1, 50, 5, []]
+  ];
+  function fresh() { return BASE.map(function (b) { return { id: b[0], name: b[1], bet: b[2], prob: b[3], metric: b[4], r: b[5], i: b[6], c: b[7], e: b[8], deps: b[9], pin: '' }; }); }
+  var S; try { S = JSON.parse(localStorage.getItem('nnl') || 'null'); } catch (e) { S = null; } if (!S || S.length !== BASE.length) S = fresh();
+  var fw = 'rice', sel = null;
+  function save() { try { localStorage.setItem('nnl', JSON.stringify(S)); } catch (e) {} }
+  function score(x) {
+    if (fw === 'rice') return x.r * x.i * (x.c / 100) / x.e;
+    if (fw === 'ice') return (x.i / 3 * 10) * (x.c / 10) * (10 - Math.min(9, x.e * 0.75)) / 100;
+    var val = x.i * (x.r / 100) * 10; return val / x.e;
+  }
+  var NOTE = { rice: 'RICE = reach × impact × confidence ÷ effort. Rewards things many people use and that are cheap to build.', ice: 'ICE = impact × confidence × ease, each out of 10. Ignores reach, so niche but deep features rise.', ve: 'Value ÷ effort, with value = impact × reach. Ignores confidence, so risky bets rise.' };
+  function plan() {
+    var cap = Math.max(4, +$('cap').value || 26), order = S.slice().sort(function (a, b) { return score(b) - score(a); }), Q = {}, used = [0, 0, 0, 0], placed = {};
+    var byId = {}; S.forEach(function (x) { byId[x.id] = x; });
+    var pending = order.slice(), guard = 0;
+    while (pending.length && guard++ < 200) {
+      var progressed = false;
+      for (var n = 0; n < pending.length; n++) {
+        var x = pending[n];
+        if (x.deps.some(function (d) { return placed[d] == null; })) continue;
+        var minQ = Math.max.apply(null, [0].concat(x.deps.map(function (d) { return placed[d] + 1; })));
+        if (x.pin === 'now') minQ = 0; if (x.pin === 'next') minQ = Math.max(minQ, 1); if (x.pin === 'later') minQ = Math.max(minQ, 2);
+        var q = minQ; while (q < 4 && used[q] + x.e > cap && !(x.pin === 'now' && q === 0)) q++;
+        if (q > 3) q = 3;
+        used[q] += x.e; placed[x.id] = q; Q[x.id] = q; pending.splice(n, 1); progressed = true; break;
+      }
+      if (!progressed) { pending.forEach(function (x) { Q[x.id] = 3; placed[x.id] = 3; }); break; }
+    }
+    return { Q: Q, used: used, cap: cap, order: order };
+  }
+  function draw() {
+    var P = plan(), f = $('filt').value;
+    $('fwnote').textContent = NOTE[fw];
+    var cols = [['Now', 'Q1 2027', [0]], ['Next', 'Q2 2027', [1]], ['Later', 'Q3 and Q4 2027', [2, 3]]];
+    $('cols').innerHTML = cols.map(function (c) {
+      var items = P.order.filter(function (x) { return c[2].indexOf(P.Q[x.id]) >= 0 && (!f || x.bet === f); }).sort(function (a, b) { return P.Q[a.id] - P.Q[b.id]; });
+      var used = c[2].reduce(function (a, q) { return a + P.used[q]; }, 0), capT = P.cap * c[2].length;
+      return '<div class="col"><h3>' + c[0] + '</h3><p class="cap' + (used > capT ? ' over' : '') + '">' + c[1] + ' · ' + used + ' of ' + capT + ' person-weeks</p>' + items.map(function (x) {
+        var late = x.deps.filter(function (d) { return P.Q[d] >= P.Q[x.id]; });
+        return '<div class="ini" style="--c:var(--' + x.bet + ')" data-id="' + x.id + '" tabindex="0" role="button" aria-label="Edit ' + esc(x.name) + '"><b>' + esc(x.name) + '</b><div class="m"><span>' + x.e + ' pw' + (x.pin ? ' <span class="pin">pinned</span>' : '') + '</span><span class="s">' + score(x).toFixed(1) + '</span></div>' + (late.length ? '<div class="dep">Needs ' + late.map(function (d) { return esc(S.filter(function (y) { return y.id === d; })[0].name); }).join(', ') + ' first</div>' : '') + '</div>';
+      }).join('') + '</div>';
+    }).join('');
+    var g = '<div class="h">Initiative</div><div class="h">Q1</div><div class="h">Q2</div><div class="h">Q3</div><div class="h">Q4</div>';
+    P.order.slice().sort(function (a, b) { return P.Q[a.id] - P.Q[b.id] || score(b) - score(a); }).forEach(function (x) { if (f && x.bet !== f) return; g += '<div>' + esc(x.name) + '</div>'; for (var q = 0; q < 4; q++) g += '<div>' + (P.Q[x.id] === q ? '<div class="bar" style="--c:var(--' + x.bet + ')">' + x.e + ' pw</div>' : '') + '</div>'; });
+    g += '<div class="h">Capacity used</div>' + P.used.map(function (u) { return '<div class="h"' + (u > P.cap ? ' style="color:#c62828"' : '') + '>' + u + ' / ' + P.cap + '</div>'; }).join('');
+    $('gantt').innerHTML = g;
+    if (sel) edit(sel, true);
+  }
+  function edit(id, keep) {
+    sel = id; var x = S.filter(function (y) { return y.id === id; })[0], ed = $('ed'); ed.hidden = false;
+    var sl = function (k, l, mn, mx, st, suf) { return '<div class="sl"><label for="e-' + k + '" style="margin:0">' + l + '</label><input type="range" id="e-' + k + '" data-k="' + k + '" min="' + mn + '" max="' + mx + '" step="' + st + '" value="' + x[k] + '"><b>' + x[k] + suf + '</b></div>'; };
+    ed.innerHTML = '<div class="row" style="justify-content:space-between;margin-top:0"><h3 style="font:700 20px var(--display)">' + esc(x.name) + '</h3><button class="btn small ghost" type="button" id="e-close">Close</button></div><p class="sub" style="margin:4px 0 0"><b>Problem:</b> ' + esc(x.prob) + '<br><b>Should move:</b> ' + esc(x.metric) + (x.deps.length ? '<br><b>Depends on:</b> ' + x.deps.map(function (d) { return esc(S.filter(function (y) { return y.id === d; })[0].name); }).join(', ') : '') + '</p>' +
+      sl('r', 'Reach', 5, 100, 5, '%') + sl('i', 'Impact', 0.25, 3, 0.25, '') + sl('c', 'Confidence', 10, 100, 10, '%') + sl('e', 'Effort', 1, 20, 1, ' pw') +
+      '<div class="row"><span class="sub" style="margin:0">Pin to</span><div class="seg" role="group" aria-label="Pin">' + ['', 'now', 'next', 'later'].map(function (p) { return '<button type="button" data-pin="' + p + '" aria-pressed="' + (x.pin === p) + '">' + (p ? p[0].toUpperCase() + p.slice(1) : 'By score') + '</button>'; }).join('') + '</div><span class="sub" style="margin:0">Score: <b>' + score(x).toFixed(2) + '</b></span></div>';
+    if (!keep) ed.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  $('cols').addEventListener('click', function (e) { var c = e.target.closest('[data-id]'); if (c) { edit(c.getAttribute('data-id')); } });
+  $('cols').addEventListener('keydown', function (e) { if (e.key === 'Enter') { var c = e.target.closest('[data-id]'); if (c) edit(c.getAttribute('data-id')); } });
+  $('ed').addEventListener('input', function (e) { var k = e.target.getAttribute('data-k'); if (!k) return; var x = S.filter(function (y) { return y.id === sel; })[0]; x[k] = +e.target.value; e.target.nextElementSibling.textContent = x[k] + ({ r: '%', c: '%', e: ' pw' }[k] || ''); save(); clearTimeout(draw.t); draw.t = setTimeout(draw, 120); });
+  $('ed').addEventListener('click', function (e) { if (e.target.id === 'e-close') { sel = null; $('ed').hidden = true; return; } var p = e.target.closest('[data-pin]'); if (p) { S.filter(function (y) { return y.id === sel; })[0].pin = p.getAttribute('data-pin'); save(); draw(); } });
+  document.querySelector('[data-fw]').parentNode.addEventListener('click', function (e) { var b = e.target.closest('[data-fw]'); if (!b) return; fw = b.getAttribute('data-fw'); document.querySelectorAll('[data-fw]').forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); draw(); });
+  $('cap').addEventListener('input', draw); $('filt').addEventListener('change', draw);
+  $('reset').addEventListener('click', function () { S = fresh(); save(); sel = null; $('ed').hidden = true; draw(); toast('Scores reset'); });
+  $('md').addEventListener('click', function () {
+    var P = plan(), cols = [['Now (Q1 2027)', [0]], ['Next (Q2 2027)', [1]], ['Later (Q3 and Q4 2027)', [2, 3]]];
+    var md = '# Spend Lens roadmap, 2027\n\nScoring: ' + fw.toUpperCase() + '. Capacity: ' + P.cap + ' person-weeks a quarter. Scores are estimates.\n\n' + cols.map(function (c) { return '## ' + c[0] + '\n\n' + P.order.filter(function (x) { return c[1].indexOf(P.Q[x.id]) >= 0; }).map(function (x) { return '- **' + x.name + '** (' + x.e + ' pw, score ' + score(x).toFixed(1) + '). ' + x.prob + ' Should move: ' + x.metric + '.'; }).join('\n'); }).join('\n\n') + '\n';
+    (navigator.clipboard ? navigator.clipboard.writeText(md) : Promise.reject()).then(function () { toast('Copied'); }, function () { toast('Could not copy'); });
+  });
+  draw();
+})();
+</script>
+</body>
+</html>
