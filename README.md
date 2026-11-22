@@ -60,9 +60,9 @@ These are the outcome measures the roadmap is built to move.
 2. Add confidence ranges and show which items change horizon
 3. Link each initiative to a one-page brief
 
-## How it was built
+## My role
 
-I framed the problem, made the product calls and wrote the conclusions. Claude (Anthropic) was my engineering partner for the code. 
+I framed the problem, made the product calls and wrote the conclusions. 
 
 ## Run it yourself
 
